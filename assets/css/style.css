@@ -1,0 +1,70 @@
+.jumbotron{          /* to style the title*/    
+    border: ridge 10px #bc67be;    
+    text-align: center;
+    color: #bc67be;
+    margin-top: 2%;
+    margin-left: 20%;
+    margin-right:20%;  
+    margin-bottom: 0;  
+    padding: 15px;
+    font-family: 'Spicy Rice', cursive;
+   
+}
+
+body {               /* to style the body with back ground image*/
+    font-family: 'Indie Flower', cursive;
+    font-size: 15px;
+    font-weight: bold;
+    background-image: url("../images/crystals.png");
+    background-repeat:no-repeat;
+    background-size:cover;    
+}
+
+.row{                /* to style the rows for content*/
+    background-color: white;
+    text-align: center;
+    margin-top: 0;
+    margin-left: 20%;
+    margin-right:20%;
+    margin-bottom: 0;
+    padding: 15px;
+    border: solid 3px #bc67be;
+}
+
+
+
+.col-md-6{
+    font-size: 25px;    
+}
+
+img{
+    height: 100px;
+    width: auto;
+    transition: all 5s ease-in-out;    
+} 
+
+
+img:hover{             
+    transform: rotate(360deg);  
+}
+
+.col-md-3 {
+    margin-top: 4px;
+    margin-bottom: 4px;
+}
+
+button {
+    display: inline-block;
+    border: none;   
+    background: #fff;
+    color: #fff;  
+}
+
+button:focus {
+    outline: 1px solid #fff;   
+}
+
+button:active {
+    transform: scale(0.75);
+}
+
