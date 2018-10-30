@@ -1,4 +1,4 @@
-.jumbotron{          /* to style the title*/    
+.jumbotron{                         /* to style the title*/    
     border: ridge 10px #bc67be;    
     text-align: center;
     color: #bc67be;
@@ -7,11 +7,10 @@
     margin-right:20%;  
     margin-bottom: 0;  
     padding: 15px;
-    font-family: 'Spicy Rice', cursive;
-   
+    font-family: 'Spicy Rice', cursive;   
 }
 
-body {               /* to style the body with back ground image*/
+body {                              /* to style the body with back ground image*/
     font-family: 'Indie Flower', cursive;
     font-size: 15px;
     font-weight: bold;
@@ -20,7 +19,7 @@ body {               /* to style the body with back ground image*/
     background-size:cover;    
 }
 
-.row{                /* to style the rows for content*/
+.row{                               /* to style the rows for content*/
     background-color: white;
     text-align: center;
     margin-top: 0;
@@ -31,55 +30,50 @@ body {               /* to style the body with back ground image*/
     border: solid 3px #bc67be;
 }
 
-
-
-.col-md-6{
+.col-md-6{                         /* font size for score row */
     font-size: 25px;    
 }
 
-img{
+img{                              /* style for crystal images */
     height: 100px;
     width: auto;
     transition: all 5s ease-in-out;    
 } 
 
-img:hover{             
+img:hover{                        /* crystal hover style */
     transform: rotate(360deg);  
 }
 
-.col-md-3 {
+.col-md-3 {                      /* crystal row */
     margin-top: 4px;
     margin-bottom: 4px;
 }
 
-button {
+button {                        /* crystal style */
     display: inline-block;
     border: none;   
     background: #fff;
     color: #fff;  
 }
 
-button:focus {
+button:focus {                 /* crystal style */
     outline: 1px solid #fff;   
 }
 
-button:active {
+button:active {                /* crystal click */
     transform: scale(0.75);
 }
 
-#endScreen{
+#endScreen{                    /* for end screen styles */
     position: absolute;
     z-index: 101;
     width: 500px;
     height: 400px;
     background-color: rgba(181,22,186,0.7);
-    margin-left: 300px;
-    /* display: none; */
-    /* visibility: hidden; */
-    
+    margin-left: 300px;    
 }
 
-#endScreenContent{
+#endScreenContent{             /* end screen content style */
     width: 400px;
     height: 200px;
     padding: 20px;    
@@ -87,20 +81,19 @@ button:active {
     text-align: center;
 }
 
-#endScreen h1{
+#endScreen h2{                /* end screen top text */
     color: white;
-    font-size: 20px;
+    font-size: 28px;
 }
 
-#endScreen h2{
+#endScreen h3{                 /* end screen bottom text */
     color: white;
-    font-size: 24px;
+    font-size: 22px;
 }
 
-#btnReplay{
+#btnReplay{                    /* replay button styles */
     display: inline-block;
-    border: none;   
-    background: black;
-    background-color: black;  
+    border: none;       
+    background-color: #791099;  
     color: white;
 }

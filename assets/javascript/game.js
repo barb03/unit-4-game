@@ -12,7 +12,7 @@ $(document).ready(function() {
 	var wins = 0;            //win score
 	var losses = 0;          //loss score
 
-	$("#endScreen").toggle();
+	$("#endScreen").toggle();             //to toggle end screen hidden and display
 
 	for (var i = 19; i < 121; i++) {     //random number to match between 19 and 121
 		ranNum.push(i);
@@ -45,12 +45,11 @@ $(document).ready(function() {
 		amethyst = arr[3];
 	} //end function crystal
 	
-	pickRandomNumber(ranNum); 
+	pickRandomNumber(ranNum);            //call functions
 	pickRandomCrystals(crystals); 
 	crystalValues(crystalNumbers);
 	
-	$("#btnReplay").on("click", function() {
-		// $("#endScreen").html(endScreen);	
+	$("#btnReplay").on("click", function() {	//replay end screen onclick	
 		$("#endScreen").hide();
 		reset();
 	});
@@ -75,28 +74,28 @@ $(document).ready(function() {
 		$("#totalNumber").html(totalScore);
 	});  //end amethyst
 
-	$(".gem").on("click", function() {
-		    //wins	
-		if (totalScore == randNumber) {
+	$(".gem").on("click", function() {         //wins
+		    	
+		if (totalScore == randNumber) {       //total score win
 			wins++;			
 			$("#totalNumber").html(totalScore);
 			$("#wins").html("Wins: " + wins);
 			$("#endScreen").toggle();
-			$("txtEndTitle").html("");			
-			$("txtEndMessage").html("You Win!");			
+			$("h2").html("YOU WIN!");			
+			$("h3").html("Computer loses");			
 		}  //end win
 
-		else if (totalScore > randNumber){        //losses
+		else if (totalScore > randNumber){        //total score losses
 			losses++;
 			$("#totalNumber").html(totalScore);
 			$("#losses").html("Losses: " + losses);
 			$("#endScreen").toggle();
-			$("txtEndTitle").html("");
-			$("txtEndMessage").html("You Lose!");			
+			$("h2").text("YOU LOST!!");
+			$("h3").html("Computer wins");			
 		}  //end loss
 	});  //end function game
 
-	function reset() {                //function reset
+	function reset() {                           //function reset
 		crystalNumbers = [];           
 		pickRandomNumber(ranNum);
 		pickRandomCrystals(crystals);
