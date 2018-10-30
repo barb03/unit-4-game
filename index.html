@@ -14,12 +14,22 @@
         <link rel="shortcut icon" href="assets/images/favicon.ico" />
         <!--  jQuery -->
         <script src="https://code.jquery.com/jquery.js"></script>
+       
     </head>
     <body>    
-        <div class="container">
+        <div class="container">                
             <div class="jumbotron">
                 <h1>Crystal Collector</h1>             
             </div>  <!--end jumbotron--> 
+
+            <div id="endScreen">
+                <div id="endScreenContent">
+                    <h1 id="txtEndTitle"></h1>
+                    <h2 id="txtEndMessage"></h2>
+                    <button id="btnReplay" >Play Again</button>                   
+                </div>
+            </div>
+            
             <div class="row">
                 <div class="col-md-12">
                     <p>How to play
@@ -32,18 +42,18 @@
             </div> <!--end first row--> 
             <div class="row">
                 <div class="col-md-3">
-                        <button id="diamond" value="0"><img id="diamond" src="./assets/images/diamond.jpg" alt="diamond"></button>
+                        <button id="diamond" class="gem" value="0"><img id="gdiamond" src="./assets/images/diamond.jpg" alt="diamond"></button>
                 </div>  <!-- end diamond image -->
                 <div class="col-md-3">
-                        <button id="emerald" value="0"><img id="emerald" src="./assets/images/emerald.jpg" alt="emerald"></button>
+                        <button id="emerald"  class="gem" value="0"><img id="gemerald" src="./assets/images/emerald.jpg" alt="emerald"></button>
                 </div>  <!-- end emerald image -->
                 <div class="col-md-3">
-                        <button id="ruby" value="0"><img id="ruby" src="./assets/images/ruby.jpg" alt="ruby"></button>
+                        <button id="ruby"  class="gem" value="0"><img id="gruby" src="./assets/images/ruby.jpg" alt="ruby"></button>
                 </div>  <!-- end ruby image -->
                 <div class="col-md-3">
-                        <button id="amethyst" value="0"><img id="amethyst" src="./assets/images/amethyst.jpg" alt="amethyst"></button>
+                        <button id="amethyst"  class="gem" value="0"><img id="gamethyst" src="./assets/images/amethyst.jpg" alt="amethyst"></button>
                 </div>  <!-- end amethyst image -->               
-            </div>  <!-- end crystals row -->   
+            </div>  <!-- end crystals row -->              
             
             <div class="row">
                 <div class="col-md-6">
@@ -51,7 +61,7 @@
                     <p id="randomNumber">120</p>
 
                     <div class="col-md-6">
-                        <p id="wins">Wins:0</p>
+                        <p id="wins">Wins: 0</p>
                     </div> <!--end wins-->
                 </div> <!--end match number--> 
                 
@@ -62,7 +72,9 @@
                         <p id="losses">Losses: 0</p>
                     </div> <!--losses-->    
                 </div> <!--end total score-->
-            </div>       
+            </div>  
+            
+            
     
         </div>  <!--end container-->
 

@@ -12,6 +12,8 @@ $(document).ready(function() {
 	var wins = 0;            //win score
 	var losses = 0;          //loss score
 
+	$("#endScreen").toggle();
+
 	for (var i = 19; i < 121; i++) {     //random number to match between 19 and 121
 		ranNum.push(i);
 	}  //end for random
@@ -42,56 +44,66 @@ $(document).ready(function() {
 		ruby = arr[2];
 		amethyst = arr[3];
 	} //end function crystal
-
-	function reset(x) {                //function reset
-		crystalNumbers = [];           
-		pickRandomNumber(ranNum);
-		pickRandomCrystals(crystals);
-		crystalValues(crystalNumbers);
-		totalScore = 0;
-		$("#totalNumber").html(totalScore);
-		alert(x);
-	} //end function reset
-
+	
 	pickRandomNumber(ranNum); 
 	pickRandomCrystals(crystals); 
 	crystalValues(crystalNumbers);
+	
+	$("#btnReplay").on("click", function() {
+		// $("#endScreen").html(endScreen);	
+		$("#endScreen").hide();
+		reset();
+	});
 		
-		$("#diamond").on("click", function() {     //diamond onclick
-			totalScore += diamond;
-			$("#totalNumber").html(totalScore);
-		});  //end diamond
+	$("#diamond").on("click", function() {     //diamond onclick
+		totalScore += diamond;
+		$("#totalNumber").html(totalScore);
+	});  //end diamond
 
-		$("#emerald").on("click", function() {     //emerald onclick
-			totalScore += emerald;
-			$("#totalNumber").html(totalScore);
-		});  //end emerald
+	$("#emerald").on("click", function() {     //emerald onclick
+		totalScore += emerald;
+		$("#totalNumber").html(totalScore);
+	});  //end emerald
 
-		$("#ruby").on("click", function() {        //ruby onclick
-			totalScore += ruby;
-			$("#totalNumber").html(totalScore);
-		});  //end ruby
+	$("#ruby").on("click", function() {        //ruby onclick
+		totalScore += ruby;
+		$("#totalNumber").html(totalScore);
+	});  //end ruby
 
-		$("#amethyst").on("click", function() {    //amethyst onclick
-			totalScore += amethyst;
-			$("#totalNumber").html(totalScore);
-		});  //end amethyst
+	$("#amethyst").on("click", function() {    //amethyst onclick
+		totalScore += amethyst;
+		$("#totalNumber").html(totalScore);
+	});  //end amethyst
 
-	$("button").on("click", function() {	      //wins	
+	$(".gem").on("click", function() {
+		    //wins	
 		if (totalScore == randNumber) {
-			wins++;
-			console.log(totalScore);
+			wins++;			
 			$("#totalNumber").html(totalScore);
 			$("#wins").html("Wins: " + wins);
-			setTimeout(function() {reset("YOU WIN!!")}, 200);
+			$("#endScreen").toggle();
+			$("txtEndTitle").html("");			
+			$("txtEndMessage").html("You Win!");			
 		}  //end win
 
 		else if (totalScore > randNumber){        //losses
 			losses++;
 			$("#totalNumber").html(totalScore);
 			$("#losses").html("Losses: " + losses);
-			setTimeout(function() {reset("WOMP-WOMP...YOU LOSE!")}, 200);
+			$("#endScreen").toggle();
+			$("txtEndTitle").html("");
+			$("txtEndMessage").html("You Lose!");			
 		}  //end loss
 	});  //end function game
+
+	function reset() {                //function reset
+		crystalNumbers = [];           
+		pickRandomNumber(ranNum);
+		pickRandomCrystals(crystals);
+		crystalValues(crystalNumbers);
+		totalScore = 0;
+		$("#totalNumber").html(totalScore);				
+		$("#endContent").show();						
+	} //end function reset
 
 }); // end of script

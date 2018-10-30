@@ -43,7 +43,6 @@ img{
     transition: all 5s ease-in-out;    
 } 
 
-
 img:hover{             
     transform: rotate(360deg);  
 }
@@ -68,3 +67,40 @@ button:active {
     transform: scale(0.75);
 }
 
+#endScreen{
+    position: absolute;
+    z-index: 101;
+    width: 500px;
+    height: 400px;
+    background-color: rgba(181,22,186,0.7);
+    margin-left: 300px;
+    /* display: none; */
+    /* visibility: hidden; */
+    
+}
+
+#endScreenContent{
+    width: 400px;
+    height: 200px;
+    padding: 20px;    
+    margin: 60px;
+    text-align: center;
+}
+
+#endScreen h1{
+    color: white;
+    font-size: 20px;
+}
+
+#endScreen h2{
+    color: white;
+    font-size: 24px;
+}
+
+#btnReplay{
+    display: inline-block;
+    border: none;   
+    background: black;
+    background-color: black;  
+    color: white;
+}
